@@ -1,0 +1,50 @@
+[
+    {
+      "name": "Yoga",
+      "description": "Yoga is a physical, mental, and spiritual practice that originated in ancient India."
+    },
+    {
+      "name": "Pilates",
+      "description": "Pilates is a low-impact exercise method that focuses on core strength, flexibility, and body awareness."
+    },
+    {
+      "name": "Zumba",
+      "description": "Zumba is a dance fitness program that combines Latin and international music with fun and effective workouts."
+    },
+    {
+      "name": "Spinning",
+      "description": "Spinning, also known as indoor cycling, is a high-intensity workout performed on stationary bikes."
+    },
+    {
+      "name": "Kickboxing",
+      "description": "Kickboxing is a martial art that combines elements of boxing and karate for a challenging and intense workout."
+    },
+    {
+      "name": "Barre",
+      "description": "Barre is a workout that combines ballet-inspired movements with elements of Pilates, dance, and yoga."
+    },
+    {
+      "name": "CrossFit",
+      "description": "CrossFit is a high-intensity fitness program that combines weightlifting, cardio, and bodyweight exercises."
+    },
+    {
+      "name": "Aerial Silks",
+      "description": "Aerial silks is a circus art that involves performing acrobatic moves and poses on suspended fabric."
+    },
+    {
+      "name": "Boxing",
+      "description": "Boxing is a combat sport that involves punching and defensive techniques for improving fitness and self-defense skills."
+    },
+    {
+      "name": "HIIT",
+      "description": "HIIT (High-Intensity Interval Training) is a workout method that alternates between short bursts of intense exercise and recovery periods."
+    },
+    {
+      "name": "Salsa Dancing",
+      "description": "Salsa dancing is a popular Latin dance style that involves energetic movements, rhythmic footwork, and partner interaction."
+    },
+    {
+      "name": "Body Pump",
+      "description": "Body Pump is a weight-based group fitness program that targets all major muscle groups using high-repetition exercises."
+    }
+  ]

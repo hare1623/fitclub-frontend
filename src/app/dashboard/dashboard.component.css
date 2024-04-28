@@ -1,0 +1,70 @@
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .users-table,
+  .classes-table {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 95%; /* Make tables take the available width */
+    margin: 18px; /* Add some margin between tables */
+    overflow-x: auto; 
+  }
+
+  table {
+    width: 100%; /* Make the table take the full width of its container */
+    border-collapse: collapse; /* Collapse table borders */
+  }
+  
+  th, td {
+    padding: 8px; /* Add padding to table cells */
+    border: 1px solid #ddd; /* Add borders to table cells */
+    text-align: center; /* Align text to the left */
+  }
+
+  th{
+    font-weight: 700;
+    font-size: large;
+  }
+  
+  .mat-icon-button {
+    min-width: 0; /* Allow mat-icon-button to shrink as needed */
+    margin-right: 8px; /* Add some margin between icon buttons */
+  }
+
+  .mat-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: #333;
+    color: #fff;
+    z-index: 1;
+  }
+  
+  .navbar-title {
+    font-weight: bold;
+    font-size: 24px;
+    color: #d0281c; 
+  }
+
+  .navbar-title:hover {
+    font-weight: bold;
+    font-size: 24px;
+    color: #cccaca; 
+    cursor: pointer;
+  }
+
+  .navbar-heading {
+    margin: 0 10px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+  }
+  

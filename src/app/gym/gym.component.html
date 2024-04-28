@@ -1,0 +1,72 @@
+<div class="navbar">
+    <mat-toolbar color="primary">
+        <span class="navbar-title" (click)="scrollToSection('home')">Fit.Club</span>
+        <nav class="navbar-links">
+          <h3 class="navbar-heading" (click)="scrollToSection('home')">Home</h3>
+          <h3 class="navbar-heading" (click)="scrollToSection('about us')">About Us</h3>
+          <h3 class="navbar-heading" (click)="scrollToSection('classes')">Classes</h3>
+          <h3 class="navbar-heading" (click)="scrollToSection('contact us')">Contact Us</h3>
+          <h3 class="navbar-heading" (click)="navigateToProfile()">Profile</h3>
+        </nav>
+      </mat-toolbar>
+</div>
+
+<div class="home" >
+    <div class="home-container" id="home">
+        <div class="home-content">
+          <h2>Welcome to the start of your beginning!!!</h2>
+          <p class="f_line">Find your desire and make them your <span style="color: red;">reality.</span></p>
+          <p class="s_line">You can start low but you always end <span style="color: red;">high.</span></p>
+        </div>
+      </div>
+</div>
+
+<div class="about" >
+    <div class="about-container" id="about us">
+        <h2>About <span style="color: red;">Us</span></h2>
+        <div class="content">
+            <p>Welcome to our gym! We are dedicated to helping you achieve your fitness goals and lead a healthy lifestyle. Our experienced trainers and state-of-the-art facilities provide a supportive environment for your fitness journey.</p>
+            <p>At our gym, we offer a wide range of fitness classes, personalized training programs, and modern equipment to cater to your individual needs. Whether you're a beginner or an advanced athlete, we have the resources to help you reach new heights.</p>
+            <p>Our team of certified trainers is passionate about fitness and committed to guiding you every step of the way. We believe in creating a positive and motivating atmosphere where you can thrive and push your limits.</p>
+            <p>Join our gym today and embark on a transformative fitness experience. Take charge of your health and well-being with us!</p>
+          </div>
+</div>
+
+<div class="classes" id="classes">
+    <div class="classes-container">
+        <h2>Classes <span style="color: red;">Available</span></h2>
+        <div class="class-grid">
+          <div *ngFor="let classItem of classes" class="class-item">
+            <h3>{{ classItem.name }}</h3>
+            <p>{{ classItem.description }}</p>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div class="contact" id="contact us">
+    <div class="contact-container">
+        <h2>Contact <span style="color: red;">Us</span></h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="number">Phone Number:</label>
+            <input type="tel" id="number" name="number" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="submit-button">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+</div>

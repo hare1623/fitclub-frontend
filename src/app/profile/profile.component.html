@@ -1,17 +1,17 @@
 <mat-toolbar color="primary">
     <span class="navbar-title">Fit.Club</span>
     <span class="spacer"></span>
-    <a href="#"class="navbar-heading" (click)="logout()">Logout</a>
+    <h3 href="#"class="navbar-heading" (click)="logout()">Logout</h3>
   </mat-toolbar>
   
   <div class="profile-container">
     <h2>Profile</h2>
     <div class="profile-details">
-      <p><strong>Name:</strong> {{ userName }}</p>
-      <p><strong>Age:</strong> {{ age }}</p>
-      <p><strong>Weight:</strong> {{ weight }}</p>
-      <p><strong>Classes:</strong> {{ classes }}</p>
-      <p><strong>Hours in Gym:</strong> {{ hoursInGym }}</p>
+      <p><strong>Name:</strong> {{ userData.name }}</p>
+      <p><strong>Age:</strong> {{ userData.age }}</p>
+      <p><strong>Weight:</strong> {{ userData.weight }}</p>
+      <p><strong>Classes:</strong> {{ userData.classesJoined }}</p>
+      <p><strong>Location:</strong> {{ userData.location }}</p>
     </div>
   </div>
   

@@ -12,4 +12,7 @@ export class AppServiceService {
   getRequest(url:string):Observable<any>{
     return this.http.get(url);
   }
+  postRequest(url: string, data: any): Observable<any> {
+    return this.http.post(url, data);
+  }
 }

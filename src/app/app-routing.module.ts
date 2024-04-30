@@ -4,14 +4,16 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { GymComponent } from './gym/gym.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginGuardGuard } from './login-guard.guard';
+import { RoleGuard } from './role.guard';
 
 const routes: Routes = [
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile', component: ProfileComponent,canActivate: [LoginGuardGuard] },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: GymComponent},
-  { path: 'dashboard' , component: DashboardComponent},
-  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect to login page by default
-  { path: '**', redirectTo: '/login' } // Redirect to login page for any other route
+  { path: 'home', component: GymComponent,canActivate: [LoginGuardGuard]},
+  { path: 'dashboard' , component: DashboardComponent,canActivate: [LoginGuardGuard,RoleGuard]},
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', redirectTo: '/login' } 
 ];
 
 @NgModule({

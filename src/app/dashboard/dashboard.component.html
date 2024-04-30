@@ -1,69 +1,58 @@
 <mat-toolbar color="primary">
     <span class="navbar-title">Fit.Club</span>
     <span class="spacer"></span>
-    <a href="#"class="navbar-heading" (click)="logout()">Logout</a>
+    <h3 href="#"class="navbar-heading" (click)="logout()">Logout</h3>
   </mat-toolbar>
-  
+
   <div class="users-table">
-    <h2 class="table-title">Users</h2>
-    <table mat-table [dataSource]="usersData">
-      <!-- Columns -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
-        <td mat-cell *matCellDef="let user">{{ user.name }}</td>
-      </ng-container>
-      <ng-container matColumnDef="age">
-        <th mat-header-cell *matHeaderCellDef>Age</th>
-        <td mat-cell *matCellDef="let user">{{ user.age }}</td>
-      </ng-container>
-      <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef>Weight</th>
-        <td mat-cell *matCellDef="let user">{{ user.weight }}</td>
-      </ng-container>
-      <ng-container matColumnDef="class">
-        <th mat-header-cell *matHeaderCellDef>Class</th>
-        <td mat-cell *matCellDef="let user">{{ user.class }}</td>
-      </ng-container>
-      <ng-container matColumnDef="userType">
-        <th mat-header-cell *matHeaderCellDef>User Type</th>
-        <td mat-cell *matCellDef="let user">{{ user.userType }}</td>
-      </ng-container>
-      <!-- Data rows -->
-      <tr mat-header-row *matHeaderRowDef="userColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: userColumns;" class="user-row"></tr>
-    </table>
-  </div>
-  
+  <h2>Users</h2>
+  <table >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Weight</th>
+        <th>Class</th>
+        <th>User Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usersData">
+        <td>{{ user.name }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.weight }}</td>
+        <td>{{ user.classesJoined }}</td>
+        <td>{{ user.type }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
   <div class="classes-table">
-    <h2 class="table-title">Classes</h2>
-    <table mat-table [dataSource]="classesData">
-      <!-- Columns -->
-      <ng-container matColumnDef="className">
-        <th mat-header-cell *matHeaderCellDef>Class Name</th>
-        <td mat-cell *matCellDef="let class">{{ class.className }}</td>
-      </ng-container>
-      <ng-container matColumnDef="description">
-        <th mat-header-cell *matHeaderCellDef>Description</th>
-        <td mat-cell *matCellDef="let class">{{ class.description }}</td>
-      </ng-container>
-      <ng-container matColumnDef="timing">
-        <th mat-header-cell *matHeaderCellDef>Timing</th>
-        <td mat-cell *matCellDef="let class">{{ class.timing }}</td>
-      </ng-container>
-      <ng-container matColumnDef="numUsers">
-        <th mat-header-cell *matHeaderCellDef>No. of Users Joined</th>
-        <td mat-cell *matCellDef="let class">{{ class.numUsers }}</td>
-      </ng-container>
-      <ng-container matColumnDef="actions">
-        <th mat-header-cell *matHeaderCellDef>Delete</th>
-        <td mat-cell *matCellDef="let class"><button mat-icon-button (click)="deleteClass(class)">
-          <mat-icon>delete</mat-icon>
-        </button></td>
-      </ng-container>
+  <h2>Classes</h2>
+  <table >
+    <thead>
+      <tr>
+        <th>Class Name</th>
+        <th>Description</th>
+        <th>Timing</th>
+        <th>No. of Users</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let classItem of classesData">
+        <td>{{ classItem.name }}</td>
+        <td>{{ classItem.description }}</td>
+        <td>{{ classItem.timing }}</td>
+        <td>{{ classItem.numUsers }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
       <!-- Data rows -->
-      <tr mat-header-row *matHeaderRowDef="classColumns"></tr>
+      <!-- <tr mat-header-row *matHeaderRowDef="classColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: classColumns;"></tr>
-    </table>
-  </div>
+    </table> -->
+  <!-- </div> -->
   
   

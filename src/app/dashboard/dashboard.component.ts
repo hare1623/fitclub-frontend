@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppServiceService } from '../service/app-service.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,31 +8,39 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  constructor(private router : Router){}
+  constructor(private router : Router,private appService : AppServiceService){}
 
-  usersData = [
-    { name: 'John Doe', age: 30, weight: 70, class: 'Yoga', userType: 'Regular' },
-    { name: 'Jane Smith', age: 25, weight: 65, class: 'Pilates', userType: 'Premium' },
-    // Add more user data as needed
-  ];
+  ngOnInit(){
+    this.getClassData();
+    this.getUsersData();
+  }
+
+  usersData :any;
 
   userColumns: string[] = ['name', 'age', 'weight', 'class', 'userType'];
 
-  classesData = [
-    { className: 'Yoga', description: 'Beginner yoga class', timing: 'Mon/Wed 6-7pm', numUsers: 15 },
-    { className: 'Pilates', description: 'Advanced pilates class', timing: 'Tue/Thu 5-6pm', numUsers: 10 },
-    // Add more class data as needed
-  ];
+  classesData :any;
 
-  classColumns: string[] = ['className', 'description', 'timing', 'numUsers', 'actions'];
+  classColumns: string[] = ['className', 'description', 'timing', 'numUsers'];
 
-  deleteClass(classData: any) {
-    // Implement delete class logic here
+  getClassData(){
+    this.appService.getRequest('http://localhost:8000/api/class').subscribe((res)=>{
+      console.log(res);
+      this.classesData= res;
+      console.log(this.classesData)
+    });
+  }
+
+  getUsersData(){
+    this.appService.getRequest('http://localhost:8000/api/user').subscribe((res)=>{
+      console.log(res);
+      this.usersData= res;
+      console.log(this.usersData)
+    });
   }
 
   logout() {
-    // Implement logout logic here
-    // For example, navigate to the login page
+    localStorage.clear();
     this.router.navigate(['/login']);
   }
 }

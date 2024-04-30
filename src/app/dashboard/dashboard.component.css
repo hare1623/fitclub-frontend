@@ -27,6 +27,7 @@
   }
 
   th{
+    text-align: center !important;
     font-weight: 700;
     font-size: large;
   }
@@ -66,5 +67,10 @@
     cursor: pointer;
     opacity: 0.7;
     transition: opacity 0.3s ease-in-out;
+  }
+
+  .navbar-heading:hover {
+    opacity: 1;
+    color: #d0281c;
   }
   
